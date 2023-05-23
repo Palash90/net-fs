@@ -22,5 +22,5 @@ jobs:
       run: cargo test --verbose
     - name: Deploy to cargo
       env:
-          CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
       run: cargo publish --verbose
