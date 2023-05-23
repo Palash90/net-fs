@@ -20,4 +20,6 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     - name: Deploy to cargo
+      env:
+          CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
       run: cargo publish --verbose
