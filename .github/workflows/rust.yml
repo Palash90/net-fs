@@ -21,6 +21,5 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
     - name: Deploy to cargo
-      run:
-        echo '${{ secrets.CRATES_IO_TOKEN }}'
-        cargo publish --token ${{ secrets.CRATES_IO_TOKEN }}
+      run: echo '${{ secrets.CRATES_IO_TOKEN }}'
+        
